@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#fff0f4" name="theme-color"/>
+  <title>
+   For Adan ♡ | Our First Monthsary
+  </title>
+  <style>
+   :root {
+  --rose:#c65e7b;
+  --deep:#79364f;
+  --pink:#f5c4d1;
+  --pale:#fff5f7;
+  --ink:#593a45;
+  --gold:#c7a06a
+}
+
+* {
+  box-sizing:border-box
+}
+
+html {
+  scroll-behavior:smooth
+}
+
+body {
+  margin:0;
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  background:linear-gradient(135deg,#fff8fa,#fbe7ed 48%,#fff5f7);
+  overflow-x:hidden
+}
+
+button,a {
+  font:inherit
+}
+
+button {
+  cursor:pointer
+}
+
+#petals {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:0
+}
+
+.petal {
+  position:absolute;
+  top:-12vh;
+  color:#d77e98;
+  opacity:.42;
+  animation:fall linear infinite;
+  filter:drop-shadow(0 3px 4px #b25c7620)
+}
+
+@keyframes fall {
+  to {
+  transform:translate3d(var(--drift),115vh,0) rotate(540deg)
+}
+
+}
+
+#intro {
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:28px;
+  position:relative;
+  z-index:1
+}
+
+.intro-card {
+  width:min(720px,100%);
+  text-align:center;
+  padding:clamp(30px,7vw,72px) clamp(22px,6vw,60px);
+  border:1px solid #eac2ce;
+  border-radius:48% 48% 28px 28px / 30% 30% 28px 28px;
+  background:#fffafbe8;
+  box-shadow:0 24px 80px #a44e671c;
+  position:relative
+}
+
+.eyebrow {
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font:11px Arial,sans-serif;
+  color:#b36b80
+}
+
+.flower {
+  font-size:clamp(38px,7vw,65px);
+  display:block;
+  animation:sway 4s ease-in-out infinite
+}
+
+@keyframes sway {
+  50% {
+  transform:rotate(8deg) translateY(-4px)
+}
+
+}
+
+h1 {
+  font-weight:normal;
+  font-size:clamp(38px,8vw,74px);
+  line-height:1.03;
+  color:var(--deep);
+  margin:18px 0
+}
+
+.script {
+  font-style:italic;
+  color:#b65e7a;
+  font-size:clamp(18px,3vw,23px)
+}
+
+.small {
+  font:12px/1.7 Arial,sans-serif;
+  letter-spacing:.05em;
+  color:#9b6d7a
+}
+
+.primary {
+  border:0;
+  border-radius:999px;
+  padding:14px 24px;
+  background:var(--deep);
+  color:#fff8fa;
+  box-shadow:0 8px 22px #79364f2c;
+  transition:transform .2s,background .2s
+}
+
+.primary:hover {
+  transform:translateY(-3px);
+  background:#9c4964
+}
+
+#site {
+  display:none;
+  position:relative;
+  z-index:1
+}
+
+header {
+  padding:22px clamp(18px,5vw,64px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  border-bottom:1px solid #e9cbd3;
+  background:#fff8fae8;
+  position:sticky;
+  top:0;
+  z-index:5;
+  backdrop-filter:blur(12px)
+}
+
+.brand {
+  font-size:21px;
+  color:var(--deep);
+  white-space:nowrap
+}
+
+nav {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:8px
+}
+
+nav button {
+  border:1px solid transparent;
+  background:transparent;
+  color:#8d5668;
+  padding:9px 12px;
+  border-radius:999px;
+  font:12px Arial,sans-serif
+}
+
+nav button.active,nav button:hover {
+  background:#f7dce4;
+  border-color:#eac1ce
+}
+
+.hero {
+  padding:72px 20px 48px;
+  text-align:center;
+  max-width:900px;
+  margin:auto
+}
+
+.hero h2 {
+  font-weight:normal;
+  font-size:clamp(36px,7vw,66px);
+  line-height:1.08;
+  margin:12px 0;
+  color:var(--deep)
+}
+
+.hero .sub {
+  max-width:560px;
+  margin:18px auto 28px;
+  line-height:1.8;
+  color:#896473
+}
+
+.heart {
+  display:inline-block;
+  color:#c45c7a;
+  animation:heartbeat 1.8s infinite
+}
+
+@keyframes heartbeat {
+  0%,100% {
+  transform:scale(1)
+}
+
+15% {
+  transform:scale(1.18)
+}
+
+30% {
+  transform:scale(1)
+}
+
+45% {
+  transform:scale(1.1)
+}
+
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 90px;
+}
+
+.section {
+  display:none;
+  animation:appear .5s ease
+}
+
+.section.active {
+  display:block
+}
+
+@keyframes appear {
+  from {
+  opacity:0;
+  transform:translateY(10px)
+}
+
+to {
+  opacity:1;
+  transform:none
+}
+
+}
+
+.section-head {
+  text-align:center;
+  margin:12px auto 32px
+}
+
+.section-head h2 {
+  font-size:clamp(30px,5vw,46px);
+  font-weight:normal;
+  color:var(--deep);
+  margin:8px
+}
+
+.section-head p {
+  color:#9a6c7b;
+  line-height:1.7
+}
+
+.letter-card {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 60px);
+    background: #fffafbd9;
+    border: 1px solid #efd2da;
+    border-radius: 12px 44px 12px 44px;
+    box-shadow: 0 18px 50px #8e3b5510;
+}
+
+.letter-card .salute {
+  font-size:27px;
+  color:var(--deep);
+  font-style:italic
+}
+
+.letter-card p {
+  font-size:17px;
+  line-height:1.95;
+  margin:0 0 20px
+}
+
+.signature {
+  text-align:right;
+  color:#b65e7a;
+  font-size:24px;
+  font-style:italic;
+  margin-top:26px
+}
+
+.controls {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:22px 0
+}
+
+.soft {
+  border:1px solid #e6bac8;
+  background:#fff8fa;
+  color:#8c4d62;
+  border-radius:999px;
+  padding:10px 16px
+}
+
+.soft:hover {
+  background:#f8e1e8
+}
+
+.counter {
+  font:12px Arial,sans-serif;
+  color:#a66c7d;
+  letter-spacing:.08em
+}
+
+.reason-card {
+  max-width:720px;
+  min-height:300px;
+  margin:auto;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:clamp(28px,6vw,64px);
+  background:linear-gradient(145deg,#fffafc,#f9e2e9);
+  border:1px solid #edc5d1;
+  border-radius:36px;
+  box-shadow:0 22px 55px #913f5715;
+  position:relative;
+  overflow:hidden
+}
+
+.reason-card:before,.reason-card:after {
+  content:"✿";
+  position:absolute;
+  color:#e8b6c5;
+  font-size:68px;
+  opacity:.48
+}
+
+.reason-card:before {
+  top:12px;
+  left:18px
+}
+
+.reason-card:after {
+  bottom:8px;
+  right:20px
+}
+
+.reason-number {
+  font:12px Arial,sans-serif;
+  letter-spacing:.2em;
+  color:#bd7890
+}
+
+.reason-text {
+  font-size:clamp(23px,4.5vw,36px);
+  line-height:1.55;
+  color:#79364f;
+  max-width:560px;
+  position:relative;
+  z-index:1
+}
+
+.progress {
+  height:4px;
+  max-width:720px;
+  background:#f0d3dc;
+  border-radius:99px;
+  margin:18px auto;
+  overflow:hidden
+}
+
+.progress span {
+  display:block;
+  height:100%;
+  background:#bd6682;
+  width:1%;
+  transition:width .3s
+}
+
+.reason-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:12px;
+  margin:30px 0
+}
+
+.reason-mini {
+  background:#fffafbe0;
+  border:1px solid #efd5dd;
+  border-radius:14px;
+  padding:15px;
+  text-align:left;
+  color:#76505d;
+  line-height:1.55;
+  cursor:pointer
+}
+
+.reason-mini:hover {
+  transform:translateY(-2px);
+  background:#fff
+}
+
+.reason-mini b {
+  display:block;
+  color:#b65e7a;
+  font:11px Arial,sans-serif;
+  letter-spacing:.12em;
+  margin-bottom:6px
+}
+
+.song-list {
+  display:grid;
+  gap:16px;
+  max-width:820px;
+  margin:auto
+}
+
+.song {
+  display:grid;
+  grid-template-columns:58px 1fr;
+  gap:18px;
+  padding:22px;
+  background:#fffafbe0;
+  border:1px solid #efd1da;
+  border-radius:20px
+}
+
+.song-icon {
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#f7dce4;
+  display:grid;
+  place-items:center;
+  font-size:23px;
+  color:#a34f6a
+}
+
+.song h3 {
+  font-size:22px;
+  font-weight:normal;
+  color:var(--deep);
+  margin:2px 0 4px
+}
+
+.artist {
+  font:11px Arial,sans-serif;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#b16a80
+}
+
+.song p {
+  font-size:15px;
+  line-height:1.8;
+  margin:12px 0 0;
+  color:#765966
+}
+
+footer {
+  text-align:center;
+  padding:30px 20px 48px;
+  color:#ad7184;
+  font-size:14px
+}
+
+footer .big-heart {
+  font-size:25px
+}
+
+@media(max-width:650px) {
+  header {
+  align-items:flex-start;
+  flex-direction:column
+}
+
+.brand {
+  font-size:19px
+}
+
+nav {
+  justify-content:flex-start
+}
+
+nav button {
+  padding:8px 10px
+}
+
+.hero {
+  padding-top:52px
+}
+
+.letter-card p {
+  font-size:16px
+}
+
+.reason-card {
+  min-height:270px
+}
+
+.song {
+  grid-template-columns:44px 1fr;
+  gap:13px;
+  padding:16px
+}
+
+.song-icon {
+  width:44px;
+  height:44px
+}
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*:before,*:after {
+  animation-duration:.01ms!important;
+  animation-iteration-count:1!important;
+  scroll-behavior:auto!important;
+  transition:none!important
+}
+
+}
+  </style>
+ </head>
+ <body>
+  <div aria-hidden="true" id="petals">
+  </div>
+  <section id="intro">
+   <div class="intro-card">
+    <span class="flower">
+     🌸
+    </span>
+    <div class="eyebrow">
+     the jelly to your peanut butter ♡
+    </div>
+    <h1>
+     For my
+     <br/>
+     <span style="font-style:italic">
+      Adan
+     </span>
+    </h1>
+    <p class="script">
+     one month with my boy ♡
+    </p>
+    <button class="primary" id="enterBtn">
+     Open your surprise&nbsp; ♡
+    </button>
+    <p class="small" style="margin-top:20px">
+     made with all my love &middot; from me to you :3
+    </p>
+   </div>
+  </section>
+  <div id="site">
+   <header>
+    <div class="brand">
+     ♡ for Adan
+    </div>
+    <nav aria-label="Monthsary sections">
+     <button class="active" data-section="letter">
+      01 &middot; The letter
+     </button>
+     <button data-section="reasons">
+      02 &middot; 100 reasons
+     </button>
+     <button data-section="music">
+      03 &middot; Our soundtrack
+     </button>
+    </nav>
+   </header>
+   <section class="hero">
+    <div class="eyebrow">
+     to my favorite person
+    </div>
+    <h2>
+     Happy first monthsary,
+     <br/>
+     <span style="font-style:italic">
+      my baobei
+     </span>
+     <span class="heart">
+      &hearts;
+     </span>
+    </h2>
+    <button class="primary" id="startLetter">
+     Begin here ♡
+    </button>
+   </section>
+   <main>
+    <section class="section active" id="letter">
+     <div class="section-head">
+      <div class="eyebrow">
+       01 &middot; from my heart to yours
+      </div>
+      <h2>
+       A letter for you
+      </h2>
+      <p>
+       ( ˶ˆᗜˆ˵ ) ♡ (˶˃ ᵕ ˂˶)
+      </p>
+     </div>
+     <article class="letter-card">
+      <div class="salute">
+       Happy First Monthsary, Maung.
+      </div>
+      <p>
+       I still can't believe it's been a month already. I don't think i'll ever get used to being able to call you my boyfriend. If someone had told my past self that I&rsquo;d end up here, being your girlfriend, I think she would&rsquo;ve had a hard time believing it. Love has always felt like something you have to be careful with, something that could leave you regretting how much of yourself you gave away. But with you, I haven&rsquo;t felt the need to keep one foot out the door. I&rsquo;ve just wanted to see where this goes, and I&rsquo;m glad I let myself.
+      </p>
+      <p>
+       That's probably one of the things I appreciate most about our relationship. You've made love feel less like a test I have to pass and more like a language I&rsquo;m finally getting comfortable speaking. I&rsquo;m still learning, and I know I don&rsquo;t always know how to explain what I feel, but I like that I get to learn with you. I like that I don&rsquo;t have to have the perfect words every time for what I feel to be real. I&rsquo;m getting used to the way you fit into my days, too. How you&rsquo;ve become someone I think about when I wake up, someone I want to tell things to, even when the things themselves aren&rsquo;t particularly interesting. Sometimes I&rsquo;ll hear something or see something and immediately think of you, and I wonder when my mind started making that connection so naturally.
+      </p>
+      <p>
+       And I love the parts of you that you probably don't think much about. The way your words sometimes tumble over each other when you&rsquo;re excited, the changes in your voice when you&rsquo;re sleepy, the way I can tell there&rsquo;s more to what you&rsquo;re feeling than you always let on. I like getting to know you beyond what you say directly. You&rsquo;re not a puzzle I need to solve, Adan. I just want to keep paying attention, because there&rsquo;s always something about you worth knowing a little better.
+      </p>
+      <p>
+       Of course, I wish the distance would be a little kinder to us. There are days when I wish I could be beside you instead of having to imagine what it would be like to hold your hand, hear your laugh in the same room, or give you a kiss without a screen between us. I want to experience the things we can only talk about for now. I want to know what it&rsquo;s like to share the same space with you, to look at you while you&rsquo;re talking instead of looking at a screen, to be there for the things that don&rsquo;t make it into our calls.
+      </p>
+      <p>
+       But I've also come to appreciate what we have right now. We're building something with circumstances that don&rsquo;t always make it easy, and yet you&rsquo;ve never made me feel like I&rsquo;m waiting for my turn to be loved. You make room for me in the life you have, and I hope you feel that I&rsquo;m trying to do the same for you. I know we can&rsquo;t give each other everything we want just yet, but I&rsquo;m grateful that we can still give each other something real.
+      </p>
+      <p>
+       Thank you for being patient with me,  for being honest with me, and for giving me room to be myself around you. There are parts of me that take time to show, and I’m glad I don’t feel like I have to force them out just to prove that I trust you. There's really still so much of me you haven't seen, and I want you to be the one who gets to know those parts too.
+      <p>
+       I hope you know that I want to be that kind of person for you, too. Someone you can be honest with even when the truth is inconvenient, someone who will listen when you have a lot to say and when you don&rsquo;t quite know how to say anything at all. I don&rsquo;t want us to be good at loving each other only when everything is easy. I want us to learn how to be kind to each other when we&rsquo;re tired, confused, or having a day when neither of us quite feels like ourselves.
+      </p>
+      <p>
+       And I know one month isn’t that long, and there’s still so much about each other we haven’t figured out yet. But I’m happy with what we have, and I love getting to know you more every day. You’ve become someone I find myself thinking about even when we’re doing completely different things. I catch myself picking up your words and the way you talk, then suddenly I’ll be doing it at school and giggling to myself while my friends wonder what’s so funny. It’s embarrassing how you manage to make me smile without even being there. There’s still so much about you I haven’t gotten to know, and I’m excited to keep learning, without either of us having to be anyone other than ourselves.
+      </p>
+      <p>
+       You&rsquo;ve become part of the way I see the world, Adan. You&rsquo;re my moon, my sun, my stars, my whole galaxy, and I know that sounds like I&rsquo;m giving you the entire universe, but I don&rsquo;t know how else to explain it. You find your way into my thoughts before the day has even properly begun, and you&rsquo;ve become part of the future I catch myself imagining. I want you in ways that distance makes difficult to explain. I want your presence, your voice beside me instead of coming through a speaker, your hand in mine, and the chance to look at you and know I don&rsquo;t have to say anything for you to understand how happy I am to be there with you. I need you in my life because, out of all the things I look forward to, sharing more of this life with you is one of the things I want most. If the universe gave me a thousand skies to look at, I think I would still search for the one that reminds me of you. And if I had to learn a thousand different ways to say I love you, I would, because even these words feel too small for everything I hold for you. I hope that one day, when I finally get to stand in front of you, I can look into your eyes and let you see what all these letters have been trying to tell you. Out of all the people I could have met and all the lives I could have lived, I am so unbelievably grateful that mine led me to you.
+      </p>
+      <p>
+       Happy first month, my baobei. I&rsquo;m really happy it&rsquo;s you. Thank you for choosing me, and for letting me choose you, too. I can&rsquo;t promise that I&rsquo;ll always know the right thing to say or that I&rsquo;ll never get scared, but I can promise that what I feel for you is something I want to take care of. I want to keep showing up for us, to keep learning you, and to give this relationship the chance to become everything we&rsquo;re willing to build together.
+      </p>
+      <p>
+       I hope this is the first of many months we get to celebrate. And when we finally get to be in the same place, I hope I get to tell you all of this again without having to type a single word.
+      </p>
+      <div class="signature">
+       သိပ်ချစ်တယ်နော် ♡
+      </div>
+     </article>
+     <div class="controls">
+      <button class="soft" data-goto="reasons">
+       Next: 100 reasons &rarr;
+      </button>
+     </div>
+    </section>
+    <section class="section" id="reasons">
+     <div class="section-head">
+      <div class="eyebrow">
+       02 &middot; and this is not enough
+      </div>
+      <h2>
+       100 reasons why I love you
+      </h2>
+      <p>
+       One hundred things about you that found a home in my heart <3
+      </p>
+     </div>
+     <div aria-live="polite" class="reason-card">
+      <div>
+       <div class="reason-number" id="reasonNumber">
+        REASON 01 / 100
+       </div>
+       <div class="reason-text" id="reasonText">
+        Because your voice is one of the sounds I could listen to for hours.
+       </div>
+      </div>
+     </div>
+     <div class="progress">
+      <span id="progressBar">
+      </span>
+     </div>
+     <div class="controls">
+      <button class="soft" id="prevReason">
+       &larr; Previous
+      </button>
+      <span class="counter" id="reasonCount">
+       01 OF 100
+      </span>
+      <button class="soft" id="nextReason">
+       Next reason &rarr;
+      </button>
+      <button class="soft" id="randomReason">
+       Surprise me ✿
+      </button>
+     </div>
+     <details style="max-width:820px;margin:22px auto">
+      <summary style="cursor:pointer;color:#9c5c72;text-align:center;padding:10px">
+       Or open all 100 reasons at once ♡
+      </summary>
+      <div class="reason-grid" id="reasonGrid">
+      </div>
+     </details>
+     <div class="controls">
+      <button class="soft" data-goto="music">
+       Next: songs that remind me of you &rarr;
+      </button>
+     </div>
+    </section>
+    <section class="section" id="music">
+     <div class="section-head">
+      <div class="eyebrow">
+       03 &middot; little songs, big feelings
+      </div>
+      <h2>
+       Music that reminds me of you :3
+      </h2>
+      <p>
+       Every song holds a little piece of what I wish I could tell you in person.
+      </p>
+     </div>
+     <div class="song-list" id="songList">
+     </div>
+     <div class="controls">
+      <button class="soft" data-goto="letter">
+       &curvearrowleft; Back to the letter
+      </button>
+      <button class="primary" id="finalNote">
+       One last thing ♡
+      </button>
+     </div>
+     <div id="lastNote" style="display:none;text-align:center;max-width:650px;margin:28px auto;padding:28px;background:#fffafbe0;border:1px solid #edc5d1;border-radius:25px">
+      <div style="font-size:35px">
+       ૮ ˶ᵔ ᵕ ᵔ˶ ა ♡ ૮ ˶ᵔ ᵕ ᵔ˶ ა
+      </div>
+      <p style="font-size:24px;line-height:1.6;color:#79364f;font-style:italic">
+       Out of all the people I could have met, I&rsquo;m so unbelievably grateful that mine led me to you.
+      </p>
+      <p class="script">
+       Happy first month, Adan. I&rsquo;m really happy it&rsquo;s you. ♡
+      </p>
+     </div>
+    </section>
+   </main>
+   <footer>
+    <div class="big-heart">
+     ♡
+    </div>
+    made for my handsome, majestic, mesmerizing boyfriend :3
+    <br/>
+    <span class="small">
+     one month down (⸝⸝> ᴗ•⸝⸝) &middot; 
+    </span>
+   </footer>
+  </div>
+  <script>
+   const reasons = [
+  {
+    "num": 1,
+    "text": "Because your voice is one of the sounds I could listen to for hours."
+  },
+  {
+    "num": 2,
+    "text": "Because I love the way you laugh."
+  },
+  {
+    "num": 3,
+    "text": "Because I love how your words tumble over each other when you're excited."
+  },
+  {
+    "num": 4,
+    "text": "Because I love hearing the changes in your voice when you're sleepy."
+  },
+  {
+    "num": 5,
+    "text": "Because I love how your tone gives me little clues about what you're feeling."
+  },
+  {
+    "num": 6,
+    "text": "Because I love your sense of humor."
+  },
+  {
+    "num": 7,
+    "text": "Because I love your playful side."
+  },
+  {
+    "num": 8,
+    "text": "Because I love how clingy you can be with me."
+  },
+  {
+    "num": 9,
+    "text": "Because I love the way you tease me."
+  },
+  {
+    "num": 10,
+    "text": "Because I love how you can make me laugh without even trying."
+  },
+  {
+    "num": 11,
+    "text": "Because I love how gentle you are."
+  },
+  {
+    "num": 12,
+    "text": "Because I love how respectful you are toward me."
+  },
+  {
+    "num": 13,
+    "text": "Because I love your patience."
+  },
+  {
+    "num": 14,
+    "text": "Because I love your honesty."
+  },
+  {
+    "num": 15,
+    "text": "Because I love that you try to understand me."
+  },
+  {
+    "num": 16,
+    "text": "Because I love how you listen when I need to talk."
+  },
+  {
+    "num": 17,
+    "text": "Because I love that you take my feelings seriously."
+  },
+  {
+    "num": 18,
+    "text": "Because I love that you can be affectionate without making me feel pressured."
+  },
+  {
+    "num": 19,
+    "text": "Because I love how you reassure me when I need it."
+  },
+  {
+    "num": 20,
+    "text": "Because I love how considerate you can be."
+  },
+  {
+    "num": 21,
+    "text": "Because I love that you have your own opinions."
+  },
+  {
+    "num": 22,
+    "text": "Because I love the way your mind works."
+  },
+  {
+    "num": 23,
+    "text": "Because I love hearing you explain things."
+  },
+  {
+    "num": 24,
+    "text": "Because I love how you get excited about things you enjoy."
+  },
+  {
+    "num": 25,
+    "text": "Because I love your curiosity."
+  },
+  {
+    "num": 26,
+    "text": "Because I love the different sides of your personality."
+  },
+  {
+    "num": 27,
+    "text": "Because I love that there's still so much about you I haven't discovered."
+  },
+  {
+    "num": 28,
+    "text": "Because I love the way you express yourself when you're comfortable."
+  },
+  {
+    "num": 29,
+    "text": "Because I love that you can be serious and silly."
+  },
+  {
+    "num": 30,
+    "text": "Because I love how you can be soft while still being your own person."
+  },
+  {
+    "num": 31,
+    "text": "Because I love the way you speak to me."
+  },
+  {
+    "num": 32,
+    "text": "Because I love how you call me pretty."
+  },
+  {
+    "num": 33,
+    "text": "Because I love the affectionate names you have for me."
+  },
+  {
+    "num": 34,
+    "text": "Because I love how you can make me shy with just a few words."
+  },
+  {
+    "num": 35,
+    "text": "Because I love the way you share your thoughts with me."
+  },
+  {
+    "num": 36,
+    "text": "Because I love the little habits that make you unmistakably you."
+  },
+  {
+    "num": 37,
+    "text": "Because I love how you can surprise me."
+  },
+  {
+    "num": 38,
+    "text": "Because I love that you don't have to pretend to be someone else around me."
+  },
+  {
+    "num": 39,
+    "text": "Because I love how you let me get to know the real you."
+  },
+  {
+    "num": 40,
+    "text": "Because I love the things you care about."
+  },
+  {
+    "num": 41,
+    "text": "Because I love how you can be playful even when you're being stubborn."
+  },
+  {
+    "num": 42,
+    "text": "Because I love your reactions when something unexpected happens."
+  },
+  {
+    "num": 43,
+    "text": "Because I love how you get when you're really interested in a conversation."
+  },
+  {
+    "num": 44,
+    "text": "Because I love the way you can be expressive without realizing it."
+  },
+  {
+    "num": 45,
+    "text": "Because I love that you're more than the version of you I see on calls."
+  },
+  {
+    "num": 46,
+    "text": "Because I love that you have a whole world of experiences I still want to hear about."
+  },
+  {
+    "num": 47,
+    "text": "Because I love the dreams and goals you have for yourself."
+  },
+  {
+    "num": 48,
+    "text": "Because I love the person you're growing into."
+  },
+  {
+    "num": 49,
+    "text": "Because I love that you have your own life and your own individuality."
+  },
+  {
+    "num": 50,
+    "text": "Because I love that getting to know you never feels finished."
+  },
+  {
+    "num": 51,
+    "text": "Because I love the way you treat me with respect."
+  },
+  {
+    "num": 52,
+    "text": "Because I love how patient you are when I'm having trouble explaining myself."
+  },
+  {
+    "num": 53,
+    "text": "Because I love that you try to understand where I'm coming from."
+  },
+  {
+    "num": 54,
+    "text": "Because I love that you can be honest with me."
+  },
+  {
+    "num": 55,
+    "text": "Because I love that you let me express my feelings."
+  },
+  {
+    "num": 56,
+    "text": "Because I love how you make room for my softer side."
+  },
+  {
+    "num": 57,
+    "text": "Because I love that I can be vulnerable around you."
+  },
+  {
+    "num": 58,
+    "text": "Because I love that you don't expect me to be perfect."
+  },
+  {
+    "num": 59,
+    "text": "Because I love that you make me feel appreciated."
+  },
+  {
+    "num": 60,
+    "text": "Because I love that you want me around."
+  },
+  {
+    "num": 61,
+    "text": "Because I love the way you show me affection."
+  },
+  {
+    "num": 62,
+    "text": "Because I love how you can comfort me."
+  },
+  {
+    "num": 63,
+    "text": "Because I love the thought you put into making me happy."
+  },
+  {
+    "num": 64,
+    "text": "Because I love how you make me feel safe enough to open up."
+  },
+  {
+    "num": 65,
+    "text": "Because I love the way you share your time with me."
+  },
+  {
+    "num": 66,
+    "text": "Because I love that you make an effort to understand me."
+  },
+  {
+    "num": 67,
+    "text": "Because I love that you can admit when something is bothering you."
+  },
+  {
+    "num": 68,
+    "text": "Because I love the care you show in the way you treat me."
+  },
+  {
+    "num": 69,
+    "text": "Because I love that you make me want to understand you better, too."
+  },
+  {
+    "num": 70,
+    "text": "Because I love that you have your own way of showing love."
+  },
+  {
+    "num": 71,
+    "text": "Because I love that you chose to be in a relationship with me."
+  },
+  {
+    "num": 72,
+    "text": "Because I love that I get to call you my boyfriend."
+  },
+  {
+    "num": 73,
+    "text": "Because I love you for who you are, and I want to keep discovering new reasons to love you."
+  },
+  {
+    "num": 74,
+    "text": "Because I love how your name has become so special to me."
+  },
+  {
+    "num": 75,
+    "text": "Because I love how naturally I think of you when something happens."
+  },
+  {
+    "num": 76,
+    "text": "Because I love how much I want to tell you about my day."
+  },
+  {
+    "num": 77,
+    "text": "Because I love that I want to hear about yours, too."
+  },
+  {
+    "num": 78,
+    "text": "Because I love how excited I get when I know we'll spend time together."
+  },
+  {
+    "num": 79,
+    "text": "Because I love playing games with you, even when I'm not good at them."
+  },
+  {
+    "num": 80,
+    "text": "Because I love that you want to play with me for the sake of being together."
+  },
+  {
+    "num": 81,
+    "text": "Because I love how we can have fun without everything going perfectly."
+  },
+  {
+    "num": 82,
+    "text": "Because I love the way you make our calls worth looking forward to."
+  },
+  {
+    "num": 83,
+    "text": "Because I love hearing your voice at the end of a long day."
+  },
+  {
+    "num": 84,
+    "text": "Because I love that distance hasn't stopped me from getting to know you."
+  },
+  {
+    "num": 85,
+    "text": "Because I love how much I want to learn about your country and your language."
+  },
+  {
+    "num": 86,
+    "text": "Because I love that you give me a reason to be curious about a world different from mine."
+  },
+  {
+    "num": 87,
+    "text": "Because I love imagining the day I finally get to meet you."
+  },
+  {
+    "num": 88,
+    "text": "Because I love the thought of hearing your laugh right beside me."
+  },
+  {
+    "num": 89,
+    "text": "Because I love that I want to know even the smallest things about you."
+  },
+  {
+    "num": 90,
+    "text": "Because I love how much there still is for us to experience together."
+  },
+  {
+    "num": 91,
+    "text": "Because I love that you make me excited about our future."
+  },
+  {
+    "num": 92,
+    "text": "Because I love that I can admire you as a person, not only as my boyfriend."
+  },
+  {
+    "num": 93,
+    "text": "Because I love the way you make me reconsider my fears about love."
+  },
+  {
+    "num": 94,
+    "text": "Because I love that you have given me reasons to open my heart again."
+  },
+  {
+    "num": 95,
+    "text": "Because I love how much I want to take care of what we have."
+  },
+  {
+    "num": 96,
+    "text": "Because I love that you inspire me to become a more thoughtful partner."
+  },
+  {
+    "num": 97,
+    "text": "Because I love that I want to understand you even on days when we don't see things the same way."
+  },
+  {
+    "num": 98,
+    "text": "Because I love that I want to keep learning how to love you well."
+  },
+  {
+    "num": 99,
+    "text": "Because I love that I want to celebrate your happiness and support your dreams."
+  },
+  {
+    "num": 100,
+    "text": "Because I love that you're Adan, with all the things that make you uniquely yourself."
+  }
+];
+const songs = [
+  {
+    "num": 1,
+    "title": "The Only Exception",
+    "artist": "Paramore",
+    "desc": "I never thought I would let myself be in a relationship again, at least not with the kind of heart I have. I used to think it was easier to keep certain parts of myself untouched than to risk giving them to someone. Then you came along, Adan, and I found myself wanting to try again. You're my exception, not because I'm suddenly unafraid of love, but because loving you feels worth being brave for. What makes you different to me is how you made me want to trust someone again without even realizing how much that meant to me. I used to have so many doubts about letting someone get close to me, and I never thought I'd find myself wanting to share this much of my heart with another person. But with you, I started wanting to try. You listened to things I was afraid to say, you were gentle with the parts of me I wasn't always confident about, and you made me feel like my past didn't have to decide how I would love someone next. I still get scared sometimes, and I know I can overthink things, but I don't want those fears to be the only things that decide what I allow myself to experience. I want to give you the chance to know me, even the parts that take time to understand, and I want to learn how to love you in ways that make you feel just as safe with me. You didn't make me forget everything I was afraid of, Adan. You made me want to stop letting those fears choose for me. And maybe that's why this song reminds me of you so much. Out of all the reasons I could have had to keep my heart to myself, you became someone I wanted to open it for. I'm really glad I gave myself that chance with you."
+  },
+  {
+    "num": 2,
+    "title": "My Heart",
+    "artist": "Paramore",
+    "desc": "This reminds me of how much of myself I want you to know. There are things I don't always know how to explain, feelings that take me a while to put into words, and parts of me that don't come out around just anyone. With you, I want to keep opening up. I want you to know that the love I give you comes from the bottom of my heart, even when I struggle to express it properly. I've reached a point where my heart feels like it's yours to hold. I've let you into parts of me I used to be afraid of sharing, and I don't want to keep holding back the love I have for you. This heart is yours, my love. I want to love you with it, trust you with it, and keep choosing you with it. It's not something I'm giving you halfway. I'm here because I want you, and I want you to know that when I say I love you, I mean it with all the parts of me I've learned to open up to you."
+  },
+  {
+    "num": 3,
+    "title": "Sesame Syrup",
+    "artist": "Cigarettes After Sex",
+    "desc": "This song makes me think about how we both had lives before we found each other, baobei. Sometimes I wonder what you were like before I knew you, what your days were like, what you used to think about, and all the things that happened to you that I wasn't there to see. It's kind of strange to think that there was a whole version of your life where you didn't know me yet, just like there was a version of mine where I didn't know you. I wish I could've known you sooner sometimes, not because I don't like how things happened between us, but because I get curious about all the little things I would've loved about you if I'd met you earlier. But then I think about how I wouldn't be the person I am now, and you wouldn't be the person you are now, and maybe we needed those lives before we could find each other like this. I know we can't change what happened before us, and I don't want to. I just want to be part of the things that happen to you from now on. I want to know about your days, hear the stories you haven't told me yet, and be there for all the things that are still waiting for you in life. I want to have our own memories so that one day we'll have so much to talk about when we look back on us. And honestly, baobei, I think I just want to love you without worrying about anything that came before me. I want to enjoy what we have and give us the chance to become something that belongs to us, something we don't have to compare to anybody or anything else. Sometimes I still find it a little unbelievable that out of all the people in the world, I got to meet you and fall in love with you. I wish you knew how happy I am that I get to be here now, in this part of your life, loving you as your girlfriend. I can't go back and meet the boy you were before me, but I get to know the person you are today, and I hope I get to keep knowing you through all the years that come after this one. I think that's what I want most, really. Not to have been there first, but to still be here, loving you, as we keep growing up and finding out what life has in store for us. I want so much more of our story, Adan, and I'm happy that we get to write it from here."
+  },
+  {
+    "num": 4,
+    "title": "Be With You",
+    "artist": "The Ridleys",
+     "desc": "I think of you whenever I listen to this song, baobei, especially the part where it says, “I'll be more of a shelter and less of a storm.” I love that line because it reminds me that loving you isn't just about telling you how much I love you. It's also about learning how to love you better. I know I can get emotional sometimes, and I still have things I need to work on, just like we both have so much to learn about ourselves. I want to be someone you can be honest with, someone you can come to when things get difficult, and someone who tries to understand you even when we're not seeing things the same way. I don't want you to feel like you have to hide what you feel from me. I want to keep growing into someone who makes you feel loved and understood, because I really do want to give you the kind of love you deserve. And when the song talks about wanting to be with someone every single day for the rest of their lives, I can't help thinking about you. I know you've said we're still too young to be talking about forever, and I understand why you feel that way. We still have so much growing up to do, so many things to experience, and so much about life we haven't figured out yet. I'm not asking you to predict our whole future or promise me that nothing will ever change. But I also don't want to pretend that I don't think about a future with you, because I do. I'm serious about you, Adan. Even if we're young, what I feel for you isn't something I'm treating like a passing thing. When I choose you, I mean it with the intention of loving you properly and continuing to choose you as we grow. I know the future isn't something either of us can guarantee, but if you're asking what I want, I want to keep being with you. I want to meet you, spend ordinary days beside you, learn more about you, and experience the parts of life we can only imagine right now. I want to be there when you're happy, when you're tired, when you're figuring yourself out, and when life doesn't go the way you hoped. I want us to have the chance to grow together and see where life takes us, without rushing ourselves to have everything figured out today. So when I hear this song, especially that part about wanting to be with you every single day, I think about how sincere that wish is for me. I know we're young, and I'm not asking you to have all the same thoughts about forever that I do. I just want you to know that when I say I want to be with you, I mean it. I'm not loving you with one foot out the door, baobei. I'm here because I want you, because I'm committed to what we have, and because I want to give this relationship a real chance. I can't promise that life will always be easy or that we'll always be the same people we are today, but I can be honest about what my heart wants right now. And right now, it's you. I want to keep learning how to love you, keep making memories with you, and keep choosing you for as long as we both want to keep choosing each other. That's what this song means to me, and that's why it makes me think of you."
+  },
+  {
+    "num": 5,
+    "title": "Cico Buff",
+    "artist": "Cocteau Twins",
+    "desc": "Cico Buff by Cocteau Twins makes me think of all the things I daydream about doing with you, baobei. I imagine us having picnics where we bring our own food and end up laughing at something completely stupid, going on little dates to places we've always wanted to visit, and spending whole afternoons in music stores or anime shops just looking at things we like. I think about movie nights where there aren't two separate screens between us, where I can finally sit beside you, lean against you, and watch a movie with you right there next to me. I wanna know what it's like to share snacks with you, steal your attention halfway through a movie just to tell you something silly, and make you laugh so much that you miss what's happening on the screen. I wanna take pictures with you, get lost exploring places neither of us knows very well, and have those days where we come home with nothing special except stories about everything we did together. I wanna be goofy around you without having to imagine your reactions, make stupid jokes just to see your face light up, and discover all the little things that make you laugh in person. Sometimes I think about how happy I'd be just walking beside you, talking about absolutely anything, knowing I don't have to say goodbye to you through a screen at the end of the day. And it's funny because I can listen to almost any song and end up imagining a whole life with you in it. The music plays, and suddenly I'm thinking about places I wanna take you, things I wanna show you, and all the versions of us I haven't gotten to experience yet. I don't just dream about seeing you, baobei. I dream about actually getting to live beside you, to be silly with you, to make ordinary days feel like something worth remembering. I hope one day these aren't just things I imagine while listening to music. I hope they're the stories we tell each other afterward, the pictures we keep, and the memories that make us smile because we finally got to do all those things together."
+  },
+  {
+    "num": 6,
+    "title": "Glue Song",
+    "artist": "beabadoobee",
+    "desc": "Glue Song by beabadoobee reminds me of how I never really planned to get this attached to you, but now you're just there in so many parts of my day. You're the person I want to tell things to, even the things that probably don't matter to anyone else. When something makes me happy, I wanna share it with you, and when I have nothing to say, I still want you there. I love how being close to you feels so natural to me, like loving you has slowly become a part of how I live. I don't think you realize how much you've grown on me, baobei, but I really do want to keep you close for a long, long time."
+  },
+  {
+    "num": 7,
+    "title": "Magnolia",
+    "artist": "Magnolia Celebration",
+    "desc": "I think this song reminds me of you because sometimes I feel like no matter how much I tell you I love you, you'll never really understand just how much I mean it, baobei. You always insist that you love me more, and I think it's cute how you try to convince me, but if only you could hear all the thoughts I have about you when we're not even talking. If only you knew how often I miss you, even during the most ordinary parts of my day, or how many times I wish I could tell you something and end up thinking about how much better it would feel if you were right here with me. Sometimes I don't even know how to explain everything I feel for you because it seems like whatever I say is always going to fall short of what I actually mean. I could tell you a hundred times that I love you, and I'd still have so much more left to say. I think that's why this song feels so special to me. It reminds me of all the things I wish I could make you understand about my heart, especially the things I struggle to put into words. And I know I can't make you see it exactly the way I feel it, but I hope that through the way I love you, the way I listen to you, and the way I keep choosing you, you'll slowly understand. You're my magnolia, Adan. I don't know if I'll ever find the perfect words to explain why you mean so much to me, but I'll never get tired of trying. So you can keep insisting that you love me more, and I'll keep loving you in all the ways I know how, because even when I can't find the words, my heart has never been unsure about you."
+  },
+  {
+    "num": 8,
+    "title": "Last Night on Earth",
+    "artist": "Green Day",
+    "desc": "Adan, my love, I think the part about sending all your love to someone is what gets me the most. It reminds me of how I can be doing the most random things and still find myself wanting to tell you about them, or how I'll hear something and immediately want you to hear it too. I love having someone I want to share my thoughts with, someone whose day I genuinely want to know about, and someone I can be completely honest with about how much I care. And that part about never having to second-guess someone's love? I want you to feel that with me. I don't want you to have to figure out whether I mean the things I tell you, because I do. I love you, Adan, and I hope I make that clear in the way I listen to you, remember the things you tell me, and care about what goes on in your life. You have my heart, mi amor, and I really do mean that."
+  },
+  {
+    "num": 9,
+    "title": "The World Is Ugly",
+    "artist": "My Chemical Romance",
+    "desc": "I think of you when I listen to this because it reminds me that even when the world can be cruel and things don't always go the way we want, there's still so much good worth holding on to. Adan, my love, I'm so glad I get to know you the way I do. I love that I can look at you and see someone I want to keep choosing, even when life gets difficult and we don't have everything figured out. I know I can't fix every problem you have or make all the bad things go away, but I hope you know you never have to pretend to be okay with me. My baby, I want to know the real you, even on days when you're tired or things feel heavier than usual. I want us to keep finding good in life together, to remind each other that there's more to life than the things that hurt us. And honestly, I'm just really happy that in this big, sometimes ugly world, I got to meet you and fall in love with you. I hope you never forget how much you mean to me, my love, because no matter how difficult life gets, you are someone I'll always be grateful to have in mine.."
+  },
+  {
+    "num": 10,
+    "title": "Pretty Boy",
+    "artist": "The Neighbourhood",
+    "desc": "Adan, my pretty boy. I DON'T THINK YOU UNDERSTAND HOW MUCH I LOVE YOU, LIKE ACTUALLY. If I could put your face on a billboard and tell the whole world that you're my boyfriend, I WOULD. I'm so proud of you and so proud that I get to call you mine. I don't know how I'm supposed to act normal about you when you're literally the person I love. I wanna show you off so bad, compliment you all the time, bother you with affection, and tell you how handsome you are even when you're already tired of hearing it. I wanna be so annoying about loving you because why would I ever want to hide it? You're MY boyfriend. MY pretty boy. And I'm so happy about it that I could talk about it all day. Even my friend knows how much I miss you. Whenever I run out of data, I swear I always end up saying, 'I miss my boyfriend,' and my friend already knows what's up. My friend would just smile at me because there I go again, talking about you for the hundredth time. I can't help it, my love. I could be doing literally anything and still find a reason to bring you up. Sometimes I just wanna talk about you because I'm happy you're mine, or because you did something cute, or because I heard your voice and now I miss you all over again. I don't think you realize how much happiness you give me just by being yourself. I LOVE TALKING ABOUT YOU. I LOVE BEING YOUR GIRLFRIEND. I LOVE YOUUU. And my baby, I really don't do casual when it comes to you. I'm devoted to you, and I'm not gonna act like I love you any less just to seem cool. I wanna love you loudly, be proud of you, support you, and keep reminding you how much you mean to me. I don't care if you think I'm crazy because I probably am a little crazy about you, I just love you so much, Adan. You're my pretty boy, my love, my baby, and the guy I keep talking about because I genuinely cannot believe I get to love someone like you and call him my boyfriend. And this song reminds me of you because I swear I'm never going to be normal about the fact that you're my boyfriend, my pretty boy, and the person I get to love this much. IF I COULD, I'D PUT YOUR FACE EVERYWHERE. EVERYWHERE. I LOVE THIS GUY SO MUCH AND THIS GUY IS YOU. MY PRETTY BOYYYY."
+  }
+];
+const petals = document.getElementById('petals');
+const flowerChars = ['✿','❀','✾','♡','❋'];
+for(let i=0;i<22;i++){
+  const el=document.createElement('span');el.className='petal';el.textContent=flowerChars[i%flowerChars.length];
+  el.style.left=(Math.random()*100)+'%';el.style.fontSize=(12+Math.random()*19)+'px';
+  el.style.animationDuration=(12+Math.random()*18)+'s';el.style.animationDelay=(-Math.random()*25)+'s';
+  el.style.setProperty('--drift',((Math.random()-.5)*160)+'px');petals.appendChild(el);
+}
+const sections=[...document.querySelectorAll('.section')];
+function showSection(id){
+  sections.forEach(s=>s.classList.toggle('active',s.id===id));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.section===id));
+  window.scrollTo({top:document.getElementById('site').offsetTop,behavior:'smooth'});
+}
+document.getElementById('enterBtn').addEventListener('click',()=>{
+  document.getElementById('intro').style.display='none';
+  document.getElementById('site').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+document.querySelectorAll('nav button').forEach(b =>
+    b.addEventListener('click', () => showSection(b.dataset.section))
+);
+
+document.querySelectorAll('[data-goto]').forEach(b =>
+    b.addEventListener('click', () => showSection(b.dataset.goto))
+);
+
+document.getElementById('startLetter').addEventListener('click', () => {
+    document.getElementById('startLetter').style.display = 'none';
+    showSection('letter');
+    document.querySelector('.letter-card').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+
+let current = 0;
+
+function renderReason(){
+  const r=reasons[current];if(!r)return;
+  document.getElementById('reasonNumber').textContent='REASON '+String(r.num).padStart(2,'0')+' / 100';
+  document.getElementById('reasonText').textContent=r.text;
+  document.getElementById('reasonCount').textContent=String(r.num).padStart(2,'0')+' OF 100';
+  document.getElementById('progressBar').style.width=(r.num)+'%';
+}
+document.getElementById('prevReason').addEventListener('click',()=>{current=(current-1+reasons.length)%reasons.length;renderReason()});
+document.getElementById('nextReason').addEventListener('click',()=>{current=(current+1)%reasons.length;renderReason()});
+document.getElementById('randomReason').addEventListener('click',()=>{current=Math.floor(Math.random()*reasons.length);renderReason()});
+const grid=document.getElementById('reasonGrid');
+reasons.forEach((r,i)=>{const b=document.createElement('button');b.className='reason-mini';const num=document.createElement('b');num.textContent='REASON '+String(r.num).padStart(2,'0');const txt=document.createElement('span');txt.textContent=r.text;b.append(num,txt);b.addEventListener('click',()=>{current=i;renderReason();document.querySelector('.reason-card').scrollIntoView({behavior:'smooth',block:'center'})});grid.appendChild(b)});
+const songList=document.getElementById('songList');
+songs.forEach((s,i)=>{
+  const article=document.createElement('article');article.className='song';
+  const icon=document.createElement('div');icon.className='song-icon';icon.textContent='♫';
+  const body=document.createElement('div');const title=document.createElement('h3');title.textContent=String(s.num).padStart(2,'0')+'. '+s.title;
+  const artist=document.createElement('div');artist.className='artist';artist.textContent=s.artist;
+  const desc=document.createElement('p');desc.textContent=s.desc;
+  body.append(title,artist,desc);article.append(icon,body);songList.appendChild(article);
+});
+document.getElementById('finalNote').addEventListener('click',()=>{const n=document.getElementById('lastNote');n.style.display=n.style.display==='none'?'block':'none';if(n.style.display==='block')n.scrollIntoView({behavior:'smooth',block:'center'})});
+renderReason();
+  </script>
+ </body>
+</html>
